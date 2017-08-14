@@ -53,12 +53,6 @@ HG2 = sqrt(9*((orgh1*HL+orgh2*D)**2)+24*orgh1*pd*HL)
 HG= (HG1+HG2)/(2.*orgh1) ! see Liu&Buck 2017 for detial
 !HG=HL+2*D_axial  ! should redescribe the HG^C
 !Print *,'HL',HL,'HG',HG
-
-if (Zamc.lt.6.e3) then
-rate_inject_HG = 0.634e-9
-else if (Zamc.ge.6.e3)then
-rate_inject_HG = 0.634e-9*6.e3/(HL+0.5*HG)
-endif
 rate_inject= min(rate_inject_HG,0.634e-9)
 nelem_inject = Z600
 !print *, '3',rate_inject

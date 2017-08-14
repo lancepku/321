@@ -178,7 +178,7 @@ SRCS =	\
 	saveflac.f90 \
 	setflac.f90 \
 	user_ab.f90 \
-	user_luc.f90 \
+	user_Liu.f90 \
 	user_Tian.f90
 
 

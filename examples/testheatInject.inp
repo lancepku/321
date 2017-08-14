@@ -254,7 +254,7 @@ phasedat.inp   ; file with distribution of phase on the 2D grid (phasedat)
 ; saving the last step only (1) or each nsave step (0)
 1
 ;read(4,*)if_hydro, nusselt, xmaxdepth,xmaxt
-0,8,-7.e3,600 
+0,8,-7.e3,600,6.34e-10 
 ; dike heat injection (Tian2017)
 ; left#,right#,top#,bottom#,latentheat,set to 1
 ; iinj1, iinj2, jinj1, jinj2, xlatheat, ratfac

@@ -61,7 +61,7 @@ rate_inject_HG = 0.634e-9*6.e3/(HL+0.5*HG)
 endif
 rate_inject= min(rate_inject_HG,0.634e-9)
 nelem_inject = Z600
-print *, '3',rate_inject
+!print *, '3',rate_inject
 !print *,'rate_inject', rate_inject
 !===========================!if( mod(nloop,10).eq.0 .OR. ireset.eq.1 ) then
 !    rh_sel = .true.
@@ -83,7 +83,7 @@ if (ny_inject.gt.0) then
          if (ny_inject.eq.1) iinj = 1
          if (ny_inject.eq.2) iinj = nx/2 
          !write (*,*) iinj
-         nelem_inject = nz-1
+!         nelem_inject = nz-1
          !average dx for injection:
  !        dxinj = 0.
 !         do jinj = 1,nelem_inject
@@ -105,7 +105,7 @@ if (ny_inject.gt.0) then
 !          print *,rate_inject_a
         rate_inject_d = max(rate_inject_a,0.0)
 !         sarc1 = -young/(1.-poiss*poiss)*rate_inject_1/dxinj*dt
-      sarc1(j)= -young*(1.-poiss)/((1.+poiss)*(1.-2.*poiss))*rate_inject/dxinj*dt
+      sarc1(j)= -young*(1.-poiss)/((1.+poiss)*(1.-2.*poiss))*rate_inject_d/dxinj*dt
        sarc2(j)= sarc1(j)*poiss/(1.-poiss)
 end do
  !        sarc1 = -young/(1.-poiss*poiss)*rate_inject/dxinj*dt

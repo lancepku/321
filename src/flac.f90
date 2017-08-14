@@ -39,8 +39,9 @@ call fl_move
 ! Heat Dike Injection     Tian 2017 adapting from Behn and Ito 2008
 !if (ny_inject.gt.0 .and. iynts.ne.1) then
 if (ny_inject.gt.0) then
-  call fl_injectheat
-  call fl_magmaheat
+   call fl_injectrate
+   call fl_injectheat
+   call fl_magmaheat
 endif
 
 ! Adjust real masses due to temperature

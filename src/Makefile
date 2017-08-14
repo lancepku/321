@@ -146,6 +146,7 @@ SRCS =	\
 	fl_rheol.f90 \
 	fl_srate.f90 \
 	fl_therm.f90 \
+        fl_injectrate.f90 \
 	fl_injectheat.f90 \
 	flac.f90 \
 	functions.f90 \
